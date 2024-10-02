@@ -1,0 +1,6 @@
+{
+    // ! DO NOT ADD ANY CONFIG HERE !
+    // This setup allows modules to extend the core configuration by replacing this file with their own.
+    // If they don't, this file will still get pulled through and it'll work as expected.
+    "extends": "./tsconfig.core.json"
+}

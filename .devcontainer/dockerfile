@@ -6,7 +6,7 @@
 ARG CONTAINER_REGISTRY=harbor.delivery.iqgeo.cloud/releases/
 
 # START SECTION Aliases for Injector images - beware this section is updated by the IQGeo project configuration tool
-FROM ${CONTAINER_REGISTRY}comms:3.2 AS comms
+
 # END SECTION
 
 
@@ -22,10 +22,16 @@ RUN apt-get update && \
     && apt-get autoremove && apt-get clean
 # END SECTION
 
+# zscaler.crt
+COPY zscaler.crt /usr/local/share/ca-certificates/zscaler.crt
+RUN chmod 644 /usr/local/share/ca-certificates/zscaler.crt && update-ca-certificates
+ENV REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+RUN export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+
 RUN pip install cryptojwt
 
 # START SECTION Copy the modules - beware this section is updated by the IQGeo project configuration tool
-COPY --link --from=comms / ${MODULES}/
+
 # END SECTION
 
 
