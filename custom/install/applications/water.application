@@ -1,0 +1,20 @@
+{
+   "name": "water",
+   "external_name": "Water",
+   "javascript_file": "modules/custom/js/main.standard.js",
+   "image_url": "https://localhost/72/bundles/configuration/images/ac7f5ee7dbd956b9bcff.png",
+   "for_online_app": true,
+   "for_native_app": true,
+   "layers": [
+      "BRT",
+      "Google",
+      "Trouble Tickets",
+      "aansluitleiding",
+      "afsluiter",
+      "brandkraan",
+      "hoofdleiding",
+      "leidingcomponent",
+      "storing",
+      "tickets"
+   ]
+}

@@ -10,7 +10,6 @@ def add_routes(config: "MywRoutingHandler") -> None:
     """
     Add REST API routes for this module
     """
-
-    # config.add_route("/modules/custom/trace", "trace_controller", "index")
+    config.add_route ("/modules/custom/ticket_api/v1//", "trouble_ticket_controller", "ticket")
 
     pass

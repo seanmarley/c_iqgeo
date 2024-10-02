@@ -1,0 +1,18 @@
+{
+   "name": "tt_status",
+   "description": "Status",
+   "values": [
+      {
+         "value": "new",
+         "display_value": "New"
+      },
+      {
+         "value": "in_progress",
+         "display_value": "In Progress"
+      },
+      {
+         "value": "completed",
+         "display_value": "Completed"
+      }
+   ]
+}

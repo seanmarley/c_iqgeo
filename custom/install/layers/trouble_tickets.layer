@@ -1,0 +1,33 @@
+{
+   "name": "Trouble Tickets",
+   "display_name": "Trouble Tickets",
+   "category": "overlay",
+   "code": "tt",
+   "datasource": "myworld",
+   "spec": {
+      "rendering": "vector",
+      "tileType": "raster",
+      "isStatic": true,
+      "useImageCanvas": true,
+      "nativeAppMode": "switchable",
+      "render_order_point_offset": 0,
+      "jsClass": null,
+      "extraOptions": null
+   },
+   "transparency": 0,
+   "min_scale": 0,
+   "max_scale": 23,
+   "render_order": 0,
+   "feature_types": [
+      {
+         "name": "trouble_line",
+         "field_name": "route",
+         "line_style": "#f8e71c:2:solid::"
+      },
+      {
+         "name": "trouble_ticket",
+         "field_name": "location",
+         "point_style": "square:#f8e71c:4:#f8e71c"
+      }
+   ]
+}

@@ -1,0 +1,14 @@
+{
+   "name": "custom",
+   "external_name": "Custom",
+   "javascript_file": "modules/custom/js/main.standard.js",
+   "image_url": "images/application_standard.png",
+   "for_online_app": true,
+   "for_native_app": true,
+   "layers": [
+      "Cables",
+      "Google",
+      "None",
+      "Trouble Tickets"
+   ]
+}
