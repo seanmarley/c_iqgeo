@@ -1,0 +1,22 @@
+{
+   "name": "tt_issue_type",
+   "description": "Issue Type",
+   "values": [
+      {
+         "value": "bug",
+         "display_value": "Bug"
+      },
+      {
+         "value": "issue",
+         "display_value": "Issue"
+      },
+      {
+         "value": "warning",
+         "display_value": "Warning"
+      },
+      {
+         "value": "critical",
+         "display_value": "Critical"
+      }
+   ]
+}

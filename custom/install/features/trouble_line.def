@@ -1,0 +1,81 @@
+{
+   "datasource": "myworld",
+   "name": "trouble_line",
+   "external_name": "Trouble Line",
+   "title": "{display_name}: [id]",
+   "short_description": null,
+   "track_changes": true,
+   "versioned": false,
+   "geom_indexed": true,
+   "editable": {
+      "insert_from_gui": true,
+      "update_from_gui": true,
+      "delete_from_gui": true
+   },
+   "editor_options": null,
+   "fields": [
+      {
+         "name": "id",
+         "external_name": "Id",
+         "type": "integer",
+         "key": true,
+         "generator": "sequence"
+      },
+      {
+         "name": "route",
+         "external_name": "Route",
+         "type": "linestring",
+         "mandatory": "true"
+      },
+      {
+         "name": "description",
+         "external_name": "Description",
+         "type": "string(100)"
+      },
+      {
+         "name": "projects",
+         "external_name": "Projects",
+         "type": "string(100)",
+         "enum": "tt_project"
+      },
+      {
+         "name": "issue_type",
+         "external_name": "Issue Type",
+         "type": "string(100)",
+         "enum": "tt_issue_type"
+      },
+      {
+         "name": "associated_object",
+         "external_name": "Associated Object",
+         "type": "reference()"
+      },
+      {
+         "name": "status",
+         "external_name": "Status",
+         "type": "string(100)",
+         "enum": "tt_status"
+      },
+      {
+         "name": "datetime_completed",
+         "external_name": "Datetime completed",
+         "type": "timestamp",
+         "viewer_class": "myw.TimeFieldViewer",
+         "editor_class": "myw.TimeFieldEditor"
+      },
+      {
+         "name": "signal_loss",
+         "external_name": "Signal loss",
+         "type": "integer"
+      }
+   ],
+   "groups": [],
+   "searches": [],
+   "queries": [
+      {
+         "value": "trouble line",
+         "description": "Trouble Line",
+         "lang": "en"
+      }
+   ],
+   "filters": []
+}

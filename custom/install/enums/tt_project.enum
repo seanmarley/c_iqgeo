@@ -1,0 +1,14 @@
+{
+   "name": "tt_project",
+   "description": "TT Projects",
+   "values": [
+      {
+         "value": "Project 1",
+         "display_value": "Project 1"
+      },
+      {
+         "value": "Project 2",
+         "display_value": "Project 2"
+      }
+   ]
+}

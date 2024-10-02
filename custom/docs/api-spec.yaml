@@ -1,0 +1,85 @@
+openapi: 3.0.2 
+info:
+  # Version is about the document (not the API).
+  title: API spec
+  version: '1.0'
+  description: |-
+    Sample api
+
+servers:
+  - url: 'https://backend-url/ticket_api/v1'
+paths:
+  
+  
+  '/':
+    post:
+      operationId: CreateTroubleTicket
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TroubleTicket'
+        required: true
+      responses:
+        '200':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TroubleTicket'
+        '400':
+          description: Invalid data entered by user
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+
+components:
+  securitySchemes:
+    Bearer:
+      name: Authorization
+      in: header
+      type: apiKey
+  schemas:
+    TroubleTicket:
+      type: object
+      properties:
+        id:
+          type: string
+        description:
+          type: string
+        projects:
+          type: string
+        issue_type:
+          type: string
+        associated_object:
+          type: string
+        status:
+          type: string
+        datetime_completed:
+          type: string
+        signal_loss:
+          type: integer
+    
+    
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+      
