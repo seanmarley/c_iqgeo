@@ -22,6 +22,11 @@ RUN apt-get update && \
     && apt-get autoremove && apt-get clean
 # END SECTION
 
+COPY zscaler.crt /usr/local/share/ca-certificates/zscaler.crt
+RUN chmod 644 /usr/local/share/ca-certificates/zscaler.crt && update-ca-certificates
+ENV REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+RUN export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+
 RUN pip install cryptojwt
 
 # START SECTION Copy the modules - beware this section is updated by the IQGeo project configuration tool
